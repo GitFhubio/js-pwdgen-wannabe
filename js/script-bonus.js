@@ -31,38 +31,71 @@
 
 
 
+// var morracinese= document.getElementById('morracinese');
+//
+// var sceltagiocatore=prompt('Scegli tra sasso carta e forbici brutto bastardo');
+//
+// while (sceltagiocatore != 'sasso' &&  sceltagiocatore != 'carta' && sceltagiocatore != 'forbici')
+// {
+// var sceltagiocatore=prompt('No allora non ci siamo capiti.Puoi scegliere solamente tra sasso carta e forbici');
+// }
+// var randomico = [
+//    "sasso",
+//    "carta",
+//    "forbici",
+// ];
+// var sceltapc = Math.floor(Math.random()*randomico.length);
+//
+// console.log(sceltapc);
+// if (sceltagiocatore === 'sasso' && sceltapc === 0 ) {morracinese.innerText='Pareggio';}
+// else if(sceltagiocatore ==='sasso' && sceltapc === 2){
+//   morracinese.innerText='Hai vinto';
+// } else if(sceltagiocatore ==='sasso' && sceltapc === 1)
+// {morracinese.innerText='Hai perso';}
+//
+// if (sceltagiocatore === 'carta' && sceltapc === 0 )
+//  {morracinese.innerText='Hai vinto';}
+// else if(sceltagiocatore ==='carta' && sceltapc === 2){
+//   morracinese.innerText='Hai vinto';
+// } else if(sceltagiocatore ==='carta' && sceltapc === 1)
+// {morracinese.innerText='Pareggio';}
+//
+// if (sceltagiocatore === 'forbici' && sceltapc === 0 )
+//  {morracinese.innerText='Hai perso';}
+// else if(sceltagiocatore ==='forbici' && sceltapc === 2){
+//   morracinese.innerText='Pareggio';
+// } else if(sceltagiocatore ==='forbici' && sceltapc === 1)
+// {morracinese.innerText='Hai vinto';}
+
+
+// versione 2
+
+
 var morracinese= document.getElementById('morracinese');
 
-var sceltagiocatore=prompt('Scegli tra sasso carta e forbici brutto bastardo');
+var sceltagiocatore = prompt('Scegli tra sasso carta e forbici brutto bastardo');
 
-while (sceltagiocatore != 'sasso' &&  sceltagiocatore != 'carta' && sceltagiocatore != 'forbici')
+
+while (sceltagiocatore !== 'sasso' &&  sceltagiocatore !== 'carta' && sceltagiocatore !== 'forbici')
 {
 var sceltagiocatore=prompt('No allora non ci siamo capiti.Puoi scegliere solamente tra sasso carta e forbici');
 }
-var randomico = [
+
+var scelte = [
    "sasso",
    "carta",
-   "forbice",
+   "forbici",
 ];
-var sceltapc = Math.floor(Math.random()*randomico.length);
 
-console.log(sceltapc);
-if (sceltagiocatore === 'sasso' && sceltapc === 0 ) {morracinese.innerText='Pareggio';}
-else if(sceltagiocatore ==='sasso' && sceltapc === 2){
-  morracinese.innerText='Hai vinto';
-} else if(sceltagiocatore ==='sasso' && sceltapc === 1)
-{morracinese.innerText='Hai perso';}
+var i=scelte.indexOf(sceltagiocatore);
 
-if (sceltagiocatore === 'carta' && sceltapc === 0 )
- {morracinese.innerText='Hai vinto';}
-else if(sceltagiocatore ==='carta' && sceltapc === 2){
-  morracinese.innerText='Hai vinto';
-} else if(sceltagiocatore ==='carta' && sceltapc === 1)
-{morracinese.innerText='Pareggio';}
+var j = Math.floor(Math.random()*scelte.length);
 
-if (sceltagiocatore === 'forbici' && sceltapc === 0 )
- {morracinese.innerText='Hai perso';}
-else if(sceltagiocatore ==='forbici' && sceltapc === 2){
-  morracinese.innerText='Pareggio';
-} else if(sceltagiocatore ==='forbici' && sceltapc === 1)
-{morracinese.innerText='Hai vinto';}
+if (i === j)
+{  morracinese.innerText='Anche il pc ha scelto ' +scelte[i]+ ' :hai pareggiato';}
+else if (i-j===1 || j-i===2){
+morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai vinto';
+}
+else if(j-i===1 || i-j===2){
+morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai perso';
+}
