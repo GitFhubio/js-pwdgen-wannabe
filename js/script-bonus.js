@@ -107,7 +107,7 @@ morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai perso';
 
 // NOTA2: AL POSTO DEL WHILE PER IL CONTROLLO POSSO RICHIAMARE LA FUNZIONE NEL CASO DEFAULT DI UNO SWITCH MAGARI se vogliamo vedere un'altra via
 //
-// codice alfredo
+// codice AG
 //
 // function playGame () {
 //  var scelte = ["sasso", "carta", "forbice"];
@@ -143,3 +143,4 @@ morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai perso';
 //
 //
 // playGame();
+// NOTA 3: Da notare lo splendido uso dell'operatore condizionale ternary che mi permette di essere più conciso dell'if basico
