@@ -8,4 +8,20 @@ console.log('Il cognome del tizio è: ' + cognome);
 var colorepreferito = prompt(cognome+'? Ma che razza di cognome è lol.Vabe\',forse ti sembrerà inopportuna la domanda,ma quale è il tuo colore preferito?');
 alert('Ma sei un pazzo furioso caro '+ nome +'...Ti ho generato una password supersicura nel dom corri a leggerla,ciao!');
 var annoCorrente = new Date().getFullYear();
-outputContainer.innerText = nome+cognome+colorepreferito+annoCorrente;
+// outputContainer.innerText='La password generata è';
+// outputContainer.append('\n'+nome+cognome+colorepreferito+annoCorrente);
+//
+outputContainer.innerHTML='La password generata è <br>';
+outputContainer.append(nome+cognome+colorepreferito+annoCorrente);
+
+
+
+var prova= document.getElementsByClassName('prova')[0];
+console.log('prova');
+if(cognome === 'Guida' ){
+prova.innerText='Qualcosa mi dice che sei del Sud';
+}else if(cognome === 'Ruggeri' ){
+prova.innerText='Qualcosa mi dice che sei del Nord';}
+else
+{prova.innerText='Non ho la minima idea di dove tu sia e manco mi interessa';
+}
