@@ -32,10 +32,37 @@
 
 
 var morracinese= document.getElementById('morracinese');
-var sceltagiocatore=prompt('Scegli tra sasso carta e forbice brutto bastardo');
-var sceltacomputer='forbice';
-var x = document.forms["giocatore"];
-var y = document.forms["computer"];
-if (sceltagiocatore === x.elements[0].value) {morracinese.innerText='Hai vinto il tuo pc è da buttare nel cesso.';}
-else if(sceltagiocatore === x.elements[1].value){morracinese.innerText='Hai perso sei scarso ritirati fallito';
-}else{morracinese.innerText='Pareggio';}
+
+var sceltagiocatore=prompt('Scegli tra sasso carta e forbici brutto bastardo');
+
+while (sceltagiocatore != 'sasso' &&  sceltagiocatore != 'carta' && sceltagiocatore != 'forbici')
+{
+var sceltagiocatore=prompt('No allora non ci siamo capiti.Puoi scegliere solamente tra sasso carta e forbici');
+}
+var randomico = [
+   "sasso",
+   "carta",
+   "forbice",
+];
+var sceltapc = Math.floor(Math.random()*randomico.length);
+
+console.log(sceltapc);
+if (sceltagiocatore === 'sasso' && sceltapc === 0 ) {morracinese.innerText='Pareggio';}
+else if(sceltagiocatore ==='sasso' && sceltapc === 2){
+  morracinese.innerText='Hai vinto';
+} else if(sceltagiocatore ==='sasso' && sceltapc === 1)
+{morracinese.innerText='Hai perso';}
+
+if (sceltagiocatore === 'carta' && sceltapc === 0 )
+ {morracinese.innerText='Hai vinto';}
+else if(sceltagiocatore ==='carta' && sceltapc === 2){
+  morracinese.innerText='Hai vinto';
+} else if(sceltagiocatore ==='carta' && sceltapc === 1)
+{morracinese.innerText='Pareggio';}
+
+if (sceltagiocatore === 'forbici' && sceltapc === 0 )
+ {morracinese.innerText='Hai perso';}
+else if(sceltagiocatore ==='forbici' && sceltapc === 2){
+  morracinese.innerText='Pareggio';
+} else if(sceltagiocatore ==='forbici' && sceltapc === 1)
+{morracinese.innerText='Hai vinto';}
