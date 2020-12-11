@@ -99,3 +99,47 @@ morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai vinto';
 else if(j-i===1 || i-j===2){
 morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai perso';
 }
+
+
+// NOTA 1: PER FARE IL CONTROLLO ALL'INIZIO INVECE DI FARE QUEI TRE DIVERSI POTEVO
+// METTERE if (scelte.indexOf(sceltagiocatore) !== -1)
+// oppure if(scelte.includes(sceltagiocatore)!== true)
+
+// NOTA2: AL POSTO DEL WHILE PER IL CONTROLLO POSSO RICHIAMARE LA FUNZIONE NEL CASO DEFAULT DI UNO SWITCH MAGARI se vogliamo vedere un'altra via
+//
+// codice alfredo
+//
+// function playGame () {
+//  var scelte = ["sasso", "carta", "forbice"];
+//
+// var sceltaPc = scelte[Math.floor(Math.random() * scelte.length)];
+//
+// var sceltaGiocatore = prompt('Scegli tra sasso carta o forbice');
+//
+// var coefficienteVincitore = scelte.indexOf(sceltaGiocatore) - scelte.indexOf(sceltaPc);
+//
+//     alert('SCELTE FATTE: \n GIOCATORE: ' + sceltaGiocatore + '\n PC:' + sceltaPc);
+//
+//
+// if(coefficienteVincitore === 0) {
+//   alert('PAREGGIO')
+// } else {
+//   switch(sceltaGiocatore) {
+//     case 'sasso':
+//     coefficienteVincitore === -1 ? alert('pc vince') : alert('giocatore vince');
+//     break;
+//     case 'carta':
+//     coefficienteVincitore === 1 ? alert('giocatore vince') : alert('pc vince');
+//     break;
+//   case 'forbice':
+//     coefficienteVincitore == 2 ? alert('pc vince') : alert('giocatore vince')
+//
+//     default :
+//       playGame();
+//       break;
+// }
+// }
+// }
+//
+//
+// playGame();
