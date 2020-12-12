@@ -143,4 +143,6 @@ morracinese.innerText='Il pc ha scelto ' +scelte[j]+ ' :hai perso';
 //
 //
 // playGame();
-// NOTA 3: Da notare lo splendido uso dell'operatore condizionale ternary che mi permette di essere più conciso dell'if basico
+// NOTA 3: Da notare l' uso dell'operatore condizionale ternary che permette di essere più concisi dell'if basico
+
+// NOTA 4: provare a farlo senza prompt che è na roba antica;
